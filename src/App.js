@@ -291,7 +291,7 @@ console.log("start");
             
             </div>
           
-            <span>Register With Token</span>
+            <span>Register With Reward Point</span>
             {/* <span>Referral Commision upto 6%</span> */}
           </div>
         </div>
