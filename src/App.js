@@ -12,6 +12,13 @@ import WalletConnectProvider from "@walletconnect/web3-provider";
 import CoinbaseWalletSDK from "@coinbase/wallet-sdk";
 
 function App() {
+  useEffect(()=>{
+   if(localStorage.getItem("userid")){
+    setQr("block");
+
+   }
+
+  }, [])
 
 const navigate = useNavigate();
 const [ usdt , setUsdt ] = useState("");
@@ -30,6 +37,7 @@ const [lvlPrice, setLvlPrice] = React.useState(0);
 const [userList, setUserList] = React.useState(0);
 const [users, setUsers] = React.useState({});
 const [exist, setExist] = React.useState(false); 
+const [qr, setQr] = React.useState("none"); 
 
 
 
@@ -186,7 +194,7 @@ console.log("start");
     var Id = await instance.methods.currUserID().call();
 
     console.log( Fees);
-    var payfess =  Fees * 100 ;
+    var payfess =  Fees ;
 
     setShow("block");
 
@@ -231,7 +239,7 @@ console.log("start");
 
 <li className="nav-item ml-2">
   
-  <a  onClick={()=> navigate('/QR')} href="#" className="btn ml-lg-auto btn-bordered-white"><i  />Receive QR </a>
+  <a  style={{display : qr}} onClick={()=> navigate('/QR')} href="#" className="btn ml-lg-auto btn-bordered-white"><i  />Receive QR </a>
 </li>
 </ul>
         <ul className="navbar-nav action">
