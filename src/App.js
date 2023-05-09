@@ -13,7 +13,7 @@ import CoinbaseWalletSDK from "@coinbase/wallet-sdk";
 
 function App() {
   useEffect(()=>{
-   if(localStorage.getItem("userid")){
+   if(exist){
     setQr("block");
 
    }
@@ -432,11 +432,7 @@ console.log("start");
   
   </tr>
 
-  <tr  >
-    <td>Income</td>
-    <td> {users.income}</td>
-  
-  </tr>
+ 
 
   <tr  >
     <td>Level Income Received</td>
