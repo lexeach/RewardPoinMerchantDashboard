@@ -64,7 +64,7 @@ const providerOptions = {
         setConnect(accounts[0].slice(0,4) + "..." + accounts[0].slice(-2) );
         var id = localStorage.getItem("userid")
         console.log( id);
-        setQR("https://https://payrp.netlify.app/?=ref"+ id)
+        setQR("https://payrp.netlify.app/?=ref"+ id)
       console.log(window.location.href.toString() + "?=ref"+ accounts[0]);
       // console.log("web3model hai ye " ,account);
       } else if (window.web3) {
