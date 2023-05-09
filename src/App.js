@@ -36,7 +36,7 @@ const [show, setShow] = React.useState("none");
 const [lvlPrice, setLvlPrice] = React.useState(0);
 const [userList, setUserList] = React.useState(0);
 const [users, setUsers] = React.useState({});
-const [exist, setExist] = React.useState(false); 
+const [exist, setExist] = React.useState(true); 
 const [qr, setQr] = React.useState("none"); 
 
 
