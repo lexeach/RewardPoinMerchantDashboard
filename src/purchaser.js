@@ -369,172 +369,9 @@ const userde = async (info ) => {
 
 <div  >
 
-      <div style={{marginTop :"8%"}} className="row">
-        <div className="">
-          <div className="card no-hover staking-card single-staking">
-            <h3 className="m-0">Get Wallet by ID </h3>
-           
-            <div className="tab-content mt-md-3" id="myTabContent">
-              <div className="tab-pane fade show active" id="tab-one" role="tabpanel" aria-labelledby="tab-one-tab">
-                <div className="staking-tab-content">
-                  {/* Info Box */}
-                  <div className="info-box d-flex justify-content-between">
-                  
-                  
-                  </div>
+     
 
-
-                  <div className="input-box my-4">
-            
-            
-
-            
-                  <span style={{margin:"2%"}} >{userList}</span>
-              <div style={{marginTop:"2%"}} className="input-area d-flex flex-column flex-md-row">
-             
-                <div  className="input-text">
-                
-                  <input value={ inputValue1 }  onChange={handleInputChange1 }  placeholder="Purchase ID" />
-                
-                </div>
-                <a  onClick={ ()=> userLists(inputValue1)} href="#" className="btn input-btn mt-2 mt-md-0 ml-md-3">User List</a>
-              </div>
-
-              <div style={{ width:"100%" , marginTop:"4%"}} >
-
-           
-          
-<p> Rewarding Purchase ID : <span> {active} </span> </p>
-<p> Current Purchse ID : <span> {active1} </span> </p>
-</div>
-
-
-
-            </div>
-        
-           
-                </div>
-       
-              </div>
-
-              
-              
-            
-            </div>
-
-       
-          
-         
-            {/* <span>Referral Commision upto 6%</span> */}
-          </div>
-        </div>
-
-
-
-        
-        
-      </div>
-
-      <div  style={{marginTop :"8%"}} className="row1">
-        <div className="">
-          <div className="card no-hover staking-card single-staking">
-            <h3 className="m-0">Purchase Details </h3>
-           
-            <div className="tab-content mt-md-3" id="myTabContent">
-              <div className="tab-pane fade show active" id="tab-one" role="tabpanel" aria-labelledby="tab-one-tab">
-                <div className="staking-tab-content">
-                  {/* Info Box */}
-                  <div className="info-box d-flex justify-content-between">
-                  
-                  
-                  </div>
-
-
-                  <div className="input-box my-4">
-            
-            
-
-            
-                 
-
-
-
-
-          
-              <div className="input-area d-flex flex-column flex-md-row">
-             
-                <div className="input-text">
-                
-                  <input value={ inputValue2 }  onChange={handleInputChange2 }  placeholder="id" />
-                
-                </div>
-                <a  onClick={ ()=> userde(inputValue2 )} href="#" className="btn input-btn mt-2 mt-md-0 ml-md-3">Show </a>
-              
-              </div>
-              <div style={{marginTop :"2%"}} className="input-area d-flex flex-column flex-md-row">
-             
-             {/* <div className="input-text">
-             
-               <input value={ inputValue3 }  onChange={handleInputChange3 }  placeholder="Address" />
-             
-             </div> */}
-             {/* <a  onClick={ ()=> userde(inputValue2 )} href="#" className="btn input-btn mt-2 mt-md-0 ml-md-3">Pool User </a> */}
-           </div>
-            </div>
-                </div>
-       
-              </div>
-
-              
-              
-            
-            </div>
-            <table style={{width :"70%"}}>
-            <tr >
-    <td>Exist</td>
-    <td> {(users.isExist)}</td>
-  
-  </tr>
-
-  <tr  >
-    <td>ID</td>
-    <td>{users.id}</td>
-  
-  </tr>
-
-  <tr  >
-    <td>Payment Received</td>
-    <td> {users.payment_received/100}</td>
-  
-  </tr>
-
-  <tr  >
-    <td>Total Reward</td>
-    <td> {users.totalReward/100}</td>
-  
-  </tr>
-{/* 
-  <tr  >
-    <td>Income</td>
-    <td> {users.income}</td>
-  
-  </tr> */}
-
-
-
-
-</table>
-          
-         
-            {/* <span>Referral Commision upto 6%</span> */}
-          </div>
-        </div>
-
-
-
-        
-        
-      </div>
+     
 
 
       <div  style={{marginTop :"8%"}} className="row1">
@@ -576,10 +413,10 @@ const userde = async (info ) => {
             <tr>
    
   <td>
-    Received Rewards
+  <b>   Received Rewards </b> 
   </td>
   <td>
-    {rReward}
+  <b>  {rReward}</b> 
   </td>
 
   
@@ -588,41 +425,17 @@ const userde = async (info ) => {
  <tr style={{marginLeft:"-10%"}}>
    
    <td>
-     Total Rewards
+    <b>Total Rewards</b> 
    </td>
    <td>
-     {tReward}
+   <b>  {tReward} </b> 
    </td>
  
    
   </tr>
 
             </table>
-            <table style={{width :"70%"}}>
-            <tr>
-   
-    <th>ID</th>
-    <th>TIME</th>
-  </tr>
-
-  {event.length > 0 &&
-              event.map((st, index) => (
-
-            <tr  key={index} >
-    <td>{st.id}</td>
-    <td>  {st.time &&
-                      dayjs
-                        .unix(parseInt(st.time.toString()))
-                        .format("ddd, DD MMM YYYY HH:mm A")}</td>
-  
-  </tr>
-
-
-))}
-
-
-
-</table>
+      
           
          
             {/* <span>Referral Commision upto 6%</span> */}
