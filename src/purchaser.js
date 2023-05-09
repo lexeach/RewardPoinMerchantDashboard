@@ -341,11 +341,21 @@ const userde = async (info ) => {
 
 </div>
 
-              <div className="input-area d-flex flex-column flex-md-row">
+           <div style={{width :"90%"}} className="input-area d-flex flex-column flex-md-row">
+                <div className="input-text">
+                  <input value={ tosend }  onChange={handleInputChange }  disabled placeholder="Amount" />
+                
+                </div>
+               
+               
+              </div>
+
+              <div style={{marginTop :"4%"}} className="input-area d-flex flex-column flex-md-row">
                 <div className="input-text">
                   <input value={ inputValue }  onChange={handleInputChange }  placeholder="Amount" />
                 
                 </div>
+               
                 <a onClick={Purchase} href="#" className="btn input-btn mt-2 mt-md-0 ml-md-3">PAY</a>
               </div>
             </div>
