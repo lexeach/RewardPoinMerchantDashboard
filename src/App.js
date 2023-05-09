@@ -155,7 +155,7 @@ console.log("start");
     const instance = new web3.eth.Contract(abi, contractaddress);
 
 
-    var lvlp =  await instance.methods.users("0x57678c4D0322704DBC2922e09AfCD3f5FE88aD6D").call();
+    var lvlp =  await instance.methods.users(accounts[0]).call();
     setUsers(lvlp);
     setExist(lvlp.isExist);
     localStorage.setItem("userid", lvlp.id );
